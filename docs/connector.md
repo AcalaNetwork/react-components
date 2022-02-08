@@ -43,15 +43,12 @@ use acala connector to connect to multiply chains
 
 #### networks
 - Type: network configs object   
-
-config the network chain information includes name, endpoints, tag
-
-- tag: network tag for filter   
-  - Type: 'primary' | 'parachain'
-- endpoints: network endpoints config
-  - Type: string[] | { [name]: address }[]
-- options: api connect options
-
+  config the network informations includes name, endpoints, tag
+  - tag: network tag for filter   
+    - Type: 'primary' | 'parachain'
+  - endpoints: network endpoints config
+    - Type: string[] | { [name]: address }[]
+  - options: other api connect options include types, oracle apis
 
 ### Hooks
 1. **useApi**   
@@ -69,7 +66,7 @@ config the network chain information includes name, endpoints, tag
     ```
 
 2. **useApis**   
-    get all api instances or filte by name/tag array
+    get multiple api instances or filter by name/tag array   
     ```javascript
     const apis = useApis();
 
