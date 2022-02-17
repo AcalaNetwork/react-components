@@ -7,5 +7,5 @@ dist
 # yarn
 .yarn/*
 !.yarn/plugins
-!.yarn/release
+!.yarn/releases
 yarn-error.log

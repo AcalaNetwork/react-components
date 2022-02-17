@@ -5,12 +5,13 @@
   ],
   "private": true,
   "packageManager": "yarn@3.1.0",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "scripts": {
     "lint": "yarn run eslint packages --fix --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write packages",
     "build": "yarn workspaces foreach run build",
-    "prepublish": "yarn run format && yarn run lint && yarn run build"
+    "prepublish": "yarn run format && yarn run lint && yarn run build",
+    "publish": "yarn run prepublish && yarn workspaces foreach run publish"
   },
   "main": "index.js",
   "license": "MIT",

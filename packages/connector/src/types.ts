@@ -10,6 +10,7 @@ export interface NetworkConfigs {
   readonly endposints: EndpointsConfigs;
   readonly options?: ApiOptions;
   readonly apiType?: ApiTypes;
+  defaultEndpoint?: string;
 }
 
 /** default set acala and polkadot, should rewrite through .d.ts */
@@ -36,6 +37,6 @@ export interface NetworkData<T extends ApiTypes> extends NetworkConfigs {
 
 export interface ConnectorContextData<T extends ApiTypes = "promise"> {
   networks: {
-    [key in ConnectorNetwork]: NetworkData<T>;
+    [key in ConnectorNetwork]?: NetworkData<T>;
   };
 }
