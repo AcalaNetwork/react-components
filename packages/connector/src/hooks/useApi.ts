@@ -1,17 +1,18 @@
-import { useContext } from "react"
+import { useContext } from "react";
+
+import { Context } from "../Context";
 import { ConnectorNetwork } from "..";
-import { Context } from "../Context"
 
 export const useApi = (name?: string) => {
   const { networks } = useContext(Context);
 
   // if name is empty, return primary api
   if (!name) {
-    return Object.values(networks).find((item) => item.tag === 'primary')?.api;
+    return Object.values(networks).find((item) => item.tag === "primary")?.api;
   }
 
   // try find by name
-  const temp = networks[name as any as ConnectorNetwork];
+  const temp = networks[name as unknown as ConnectorNetwork];
 
   if (temp) {
     return temp.api;
@@ -19,4 +20,4 @@ export const useApi = (name?: string) => {
 
   // try find by tag
   return Object.values(networks).find((item) => item.tag === name)?.api;
-}
+};

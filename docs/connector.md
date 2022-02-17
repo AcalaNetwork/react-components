@@ -9,24 +9,25 @@ use acala connector to connect to multiply chains
 
 2. add connector to project
     ```jsx
-    import { Connector } from '@acala-network/react-connector';
+    import { Connector, ConnectNetwork } from '@acala-network/react-connector';
 
     const configs = {
       networks: {
-        acala: {
+        [ConnectNetwork.ACALA]: {
           tag: 'default',
-          endpoints: ['xx', 'xx']
-        },
-        polkadot: {
-          tag: 'parachain',
-          endpoints: ['xx', 'xx']
-        },
-        statemine: {
           endpoints: ['xx', 'xx'],
           options: {
             /* connect options */
+            ...
           }
         },
+        [ConnectNetwork.KARURA]: {
+          tag: 'parachain',
+          endpoints: ['xx', 'xx']
+        },
+        [ConnectNetwork.STATEMINE]: {
+          endpoints: ['xx', 'xx'],
+        }
       }
     };
 

@@ -1,9 +1,11 @@
 # node modules
 node_modules
 
+# output file
+dist
+
 # yarn
 .yarn/*
 !.yarn/plugins
 !.yarn/release
 yarn-error.log
-dist
