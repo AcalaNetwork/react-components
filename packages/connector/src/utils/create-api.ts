@@ -10,10 +10,10 @@ export const initRxApi = (
   configs: NetworkConfigs,
   dispatch: Dispatch<ActionType>
 ) => {
-  const { endposints, options } = configs;
+  const { endpoints, options } = configs;
 
   // create ws provider
-  const provider = new WsProvider(Object.values(endposints));
+  const provider = new WsProvider(Object.values(endpoints));
 
   dispatch({
     type: "update-network-status",
@@ -45,10 +45,10 @@ export const initPromiseApi = async (
   configs: NetworkConfigs,
   dispatch: Dispatch<ActionType>
 ) => {
-  const { endposints, options } = configs;
+  const { endpoints, options } = configs;
 
   // create ws provider
-  const provider = new WsProvider(Object.values(endposints));
+  const provider = new WsProvider(Object.values(endpoints));
 
   dispatch({
     type: "update-network-status",

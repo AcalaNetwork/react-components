@@ -7,7 +7,7 @@ export type EndpointsConfigs = string[] | Record<string, string>;
 
 export interface NetworkConfigs {
   readonly tag?: NetworkTag;
-  readonly endposints: EndpointsConfigs;
+  readonly endpoints: EndpointsConfigs;
   readonly options?: ApiOptions;
   readonly apiType?: ApiTypes;
   defaultEndpoint?: string;

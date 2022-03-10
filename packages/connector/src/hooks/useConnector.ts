@@ -15,7 +15,7 @@ function useCachedNetworkConfigs(
     const newCacheKey = Object.entries(network)
       .map(
         ([k, v]) =>
-          `${k}-${JSON.stringify({ tag: v.tag, endpoints: v.endposints })}`
+          `${k}-${JSON.stringify({ tag: v.tag, endpoints: v.endpoints })}`
       )
       .join("-");
 

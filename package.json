@@ -11,7 +11,7 @@
     "format": "prettier --write packages",
     "build": "yarn workspaces foreach run build",
     "prepublish": "yarn run format && yarn run lint && yarn run build",
-    "publish": "yarn run prepublish && yarn workspaces foreach run publish"
+    "publish": "yarn run prepublish && yarn workspaces foreach npm publish"
   },
   "main": "index.js",
   "license": "MIT",
